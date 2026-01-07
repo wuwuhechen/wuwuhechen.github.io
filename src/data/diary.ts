@@ -16,7 +16,7 @@ const diaryData: DiaryItem[] = [
 	{
 		id: 1,
 		content: "日历模块测试",
-		date: "2026-01-6T21:30:00Z",
+		date: "2026-01-06T21:30:00Z",
 		images: ["/images/diary/sakura.jpg", "/images/diary/1.jpg"],
 	},
 ];
