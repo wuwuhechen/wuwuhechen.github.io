@@ -57,7 +57,7 @@ export const siteConfig: SiteConfig = {
 	},
 
 	bangumi: {
-		userId: "sai", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "wuwuhechen", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 		fetchOnDev: true, // 是否在开发环境下获取 Bangumi 数据（默认 false），获取前先执行 pnpm build 构建 json 文件
 	},
 
@@ -268,10 +268,10 @@ export const navBarConfig: NavBarConfig = {
 					icon: "fa6-brands:bilibili",
 				},
 				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
+					name: "leetcode",
+					icon: "simple-icons:leetcode",
 					external: true,
-					icon: "mdi:git",
+					url: "https://leetcode.cn/u/wuwuhechen/",
 				},
 			],
 		},
@@ -346,7 +346,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
+	avatar: "assets/images/icon.jpg", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
 	name: "无物何尘",
 	bio: "Per aspera ad astra", // 个人简介
 	typewriter: {
@@ -368,6 +368,11 @@ export const profileConfig: ProfileConfig = {
 			name: "GitHub",
 			icon: "fa6-brands:github",
 			url: "https://github.com/wuwuhechen",
+		},
+		{
+			name: "leetcode",
+			icon: "simple-icons:leetcode",
+			url: "https://leetcode.cn/u/wuwuhechen/",
 		},
 		// {
 		// 	name: "Codeberg",
