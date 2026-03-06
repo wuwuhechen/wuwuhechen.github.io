@@ -44,3 +44,5 @@ src/pages/myself.astro
 
 # Bangumi generated data
 src/data/bangumi-data.json
+.frontmatter/database/mediaDb.json
+.frontmatter/database/pinnedItemsDb.json
