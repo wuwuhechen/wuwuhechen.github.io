@@ -4,7 +4,7 @@ published: 2026-02-01
 date: 2026-02-01
 pinned: false
 description: 使用位运算实现加减乘除的基本方法
-tags: [数据结构，算法, 位运算]
+tags: [数据结构,算法,位运算]
 category: 算法
 licenseName: "Unlicensed"
 draft: false

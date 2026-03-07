@@ -2,12 +2,12 @@
 title: Golang基础知识
 published: 2025-03-06
 date: 2025-03-06
-pinned: true
+pinned: false
 description: 介绍Golang的基础类型和常用的分支语句，帮助初学者快速入门Golang编程。
 tags: [Golang, 基础知识]
 categor: Golang
 licenseName: Unlicensed
-draft: true
+draft: false
 ---
 
 Golang是一种开源的编程语言，由Google开发，具有简洁、高效和并发编程的特点。本文将介绍Golang的基础类型和常用的分支语句，帮助初学者快速入门Golang编程。

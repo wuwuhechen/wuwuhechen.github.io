@@ -4,7 +4,7 @@ published: 2026-02-04
 date: 2026-02-02
 pinned: false
 description: 链表高频题目和必备技巧
-tags: [数据结构，算法, 链表]
+tags: [数据结构,算法, 链表]
 category: 算法
 licenseName: "Unlicensed"
 draft: false

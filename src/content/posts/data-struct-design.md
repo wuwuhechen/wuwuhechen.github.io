@@ -4,7 +4,7 @@ published: 2026-02-04
 date: 2026-02-04
 pinned: false
 description: 数据结构设计高频题
-tags: [数据结构，算法，设计]
+tags: [数据结构,算法,设计]
 category: 算法
 licenseName: "Unlicensed"
 draft: false
