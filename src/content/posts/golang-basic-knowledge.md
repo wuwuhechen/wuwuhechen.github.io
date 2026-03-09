@@ -5,7 +5,7 @@ date: 2025-03-06
 pinned: false
 description: 介绍Golang的基础类型和常用的分支语句，帮助初学者快速入门Golang编程。
 tags: [Golang, 基础知识]
-categor: Golang
+category: Golang
 licenseName: Unlicensed
 draft: false
 ---
@@ -380,6 +380,86 @@ func main() {
 >
 >打印map时，Go会以map[key1:value1 key2:value2 ...]的格式输出map的键值对。
 :::
+
+## 指针
+Go语言支持指针，但不支持指针运算。指针可以用来传递变量的地址，使得函数能够修改调用者的变量。使用指针可以提高程序的效率，避免不必要的复制。
+
+```go
+package main
+
+import "fmt"
+
+func zeroVal(ival int) {
+	ival = 0
+}
+
+func zeroPtr(iptr *int) {
+	*iptr = 0
+}
+
+func main() {
+	i := 1
+	fmt.Println("initial:", i)
+
+	zeroVal(i)
+	fmt.Println("zeroVal:", i)
+
+	zeroPtr(&i)
+	fmt.Println("zeroPtr:", i)
+	fmt.Println("pointer:", &i)
+}
+```
+
+上述代码定义了两个函数，分别采用了值传递和指针传递的方式来修改变量`i`的值。`zeroVal`函数接受一个整数参数，并将其设置为0，但由于是值传递，调用后`i`的值仍然是1。而`zeroPtr`函数接受一个整数指针参数，通过解引用将其指向的值设置为0，调用后`i`的值变为0。最后，我们还打印了变量`i`的地址，展示了指针与变量之间的关系。
+
+## 字符串与Rune
+Go语言与其他语言不同，它不存在字符类型，字符的概念被称为**Rune**,它是一个int32类型的别名，用于表示一个Unicode码点。字符串在Go中是不可变的字节序列，可以包含任意的Unicode字符。同样的，Go的字符串是以UTF-8编码的，这意味着一个字符可能占用多个字节。
+
+```go
+package main
+
+import (
+	"fmt"
+	"unicode/utf8"
+)
+
+func main() {
+
+	const s = "北京欢迎你"
+	fmt.Println("len:", len(s))
+
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("%x ", s[i])
+	}
+	fmt.Println("----")// 打印字符串的字节表示，每个字符可能占用多个字节
+
+	fmt.Println("rune count", utf8.RuneCountInString(s)) //对比len函数和utf8.RuneCountInString函数的结果，可以发现前者返回字节数，后者返回字符数
+
+	for index, rune := range s {
+		fmt.Printf("%#U starts at byte position %d\n", rune, index)
+	}// 使用range循环遍历字符串时，Go会自动解码UTF-8编码的字符，并返回每个字符的Unicode码点和它在字符串中的字节位置，所以我们可以直接使用rune变量来处理每个字符，而不需要担心字符占用的字节数
+
+	fmt.Println("\nUsing DecodeRuneInString")
+	for i, w := 0, 0; i < len(s); i += w {
+		rune, width := utf8.DecodeRuneInString(s[i:])
+		fmt.Printf("%#U starts at byte position %d\n", rune, i)
+		w = width
+
+		examineRune(rune)
+	}// 还可以使用utf8.DecodeRuneInString函数来手动解码字符串中的字符，这个函数与range循环相似
+}
+
+func examineRune(r rune) {
+	if r == 't' {
+		fmt.Println("It's a t")
+	} else if r == '欢' {
+		fmt.Println("It's 欢")
+	}
+}
+```
+
+在上述代码中，我们采用中文作为多字节字符串的示例，展示了字节长度与字符长度的区别，所以在生产环境中，应该尽量使用utf8库提供的函数来处理字符串，以避免处理多字节字符时出现错误。
+
 
 # 总结
 本文介绍了Golang的基础类型和常用的分支语句，包括值类型、变量与常量、循环语句和分支语句。通过这些基础知识，初学者可以开始编写简单的Golang程序，并逐步深入学习更高级的Golang特性和应用。
