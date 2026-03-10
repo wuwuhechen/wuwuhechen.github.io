@@ -1,7 +1,7 @@
 ---
 title: Golang基础知识
-published: 2025-03-06
-date: 2025-03-06
+published: 2026-03-06
+date: 2026-03-06
 pinned: false
 description: 介绍Golang的基础类型和常用的分支语句，帮助初学者快速入门Golang编程。
 tags: [Golang, 基础知识]

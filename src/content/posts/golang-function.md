@@ -1,7 +1,7 @@
 ---
 title: Golang函数的介绍和使用
-published: 2025-03-09
-date: 2025-03-09
+published: 2026-03-09
+date: 2026-03-09
 description: 介绍Golang函数的定义、参数传递方式和返回值，帮助初学者理解和使用Golang函数。
 tags: [Golang, 基础知识]
 category: Golang

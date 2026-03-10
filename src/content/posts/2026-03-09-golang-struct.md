@@ -1,7 +1,7 @@
 ---
 title: Golang结构体的介绍和使用
-published: 2025-03-09
-date: 2025-03-09
+published: 2026-03-09
+date: 2026-03-09
 pinned: false
 description: 介绍Golang结构体的定义、字段和方法，帮助初学者理解和使用Golang结构体。
 tags: [Golang, 基础知识]
