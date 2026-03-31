@@ -6,7 +6,7 @@ pinned: true
 description: 基于Go语言实现lru缓存，并实现客户端与服务端的交互
 tags: [Golang, 数据结构, 算法]
 category: Examples
-draft: true
+draft: false
 permalink: encrypted-example
 ---
 
