@@ -1,5 +1,5 @@
 ---
-title: golang-gin-basic-knowledge
+title: gin框架基础知识
 aliases:
   - gin框架基础知识
 published: 2026-07-29
